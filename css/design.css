@@ -1,23 +1,186 @@
 body {
     font-size: 16px;
     font-family: 'aldo', sans-serif;
-    background: #233D58;
+    background: purple;
     position: relative;
 }
 
-/* Esqueleto Responsive Design */
-@media screen and (min-width: 480px) {
-    
+header {
+    background: #233D58;
+    height: 100px;
+    width: 100%;
 }
 
-@media screen and (min-width: 600px) {
+header h1 {
+    display: none;
+}
 
+header nav .ioMenuMovil {
+    cursor: pointer;
+    height: 25px;
+    line-height: 40px;
+    margin: 0px 0px 0px 10px;
+    width: 100px;
+}
+
+header nav .ioMenuMovil img {
+    width: 100%;
+}
+
+header nav #card_menu {
+    background: white;
+    border-right: 3px solid #AFAEAE;
+    left: 0px;
+    padding-bottom: 5px;
+    position: relative;
+    top: -30px;
+    width: 230px;
+    z-index: 999;
+}
+
+header nav #card_menu #hideMenu img {
+    padding-top: 25px;
+}
+
+header nav #card_menu #logo_menu {
+    height: 200px;
+    margin: 60px 0px;
+    margin-bottom: 40px;
+    margin-left: 5%;
+    width: 80%;
+}
+
+header nav #card_menu #logo_menu img {
+    width: 100%;
+}
+
+header nav #card_menu ul {
+    margin-top: -40px;
+}
+
+header nav #card_menu ul li {
+    font-size: 1.5em;
+    line-height: 35px;
+    list-style: none;
+}
+
+header nav #card_menu ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+header #prev_section,
+header #next_section {
+    cursor: pointer;
+    height: 25px;
+    margin: 5px;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    width: 25px;
+}
+
+header #prev_section {
+    right: 35px;
+}
+
+header #next_section {
+    right: 5px;
+}
+
+header #prev_section i,
+header #next_section i {
+    color: white;
+    font-size: 20px;
+    left: 2px;
+    position: relative;
+    top: 2px;
+}
+
+/* Esqueleto Responsive Design */
+@media screen and (min-width: 480px) {body {
+    background: red;
+}}
+
+@media screen and (min-width: 600px) {
+    body {
+        background: purple;
+    }
 }
 
 @media screen and (min-width: 767px) {
 
+    body {
+        background: yellow;
+    }
+
+    header {
+        height: 50px;
+    }
+
+    header h1 {
+        display: inline-block;
+        height: 50px;
+        /*
+            Aplico el line-height de 50px para que esté alineado verticalmente
+            con la altura del height del header
+        */
+        line-height: 50px;
+        margin: 0px;
+        margin-left: 50px;
+        min-width: 200px;
+        width: 20%;
+    }
+
+    header h1 > * {
+        color: white;
+        display: inline-block;
+        font-size: 0.8em;
+        margin: 0px 3px;
+        text-decoration: none;
+        vertical-align: middle;
+    }
+
+    header h1 figure {
+        height: 40px;
+        margin: 0px;
+        width: 40px;
+    }
+
+    header h1 figure img {
+        width: 100%;
+    }
+
+    header #prev_section,
+    header #next_section {
+        border-radius: 30px;
+        font-size: 50px;
+        height: 60px;
+        position: absolute;
+        right: 50px;
+        width: 60px;
+        z-index: 999;
+    }
+
+    header #prev_section {
+        top: 115px;
+    }
+
+    header #next_section {
+        top: 190px;
+    }
+
+    header #prev_section i,
+    header #next_section i {
+        color: #29abe2;
+        font-size: 50px;
+        left: 2px;
+        top: 2px;
+    }
 }
 
 @media screen and (min-width: 950px) {
-
+    body {
+        background: green;
+    }
 }
