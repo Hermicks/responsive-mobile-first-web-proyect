@@ -1,0 +1,23 @@
+body {
+    font-size: 16px;
+    font-family: 'aldo', sans-serif;
+    background: #233D58;
+    position: relative;
+}
+
+/* Esqueleto Responsive Design */
+@media screen and (min-width: 480px) {
+    
+}
+
+@media screen and (min-width: 600px) {
+
+}
+
+@media screen and (min-width: 767px) {
+
+}
+
+@media screen and (min-width: 950px) {
+
+}
