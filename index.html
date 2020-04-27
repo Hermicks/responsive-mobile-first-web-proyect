@@ -50,7 +50,7 @@
                     <li><a onClick="navSection('skills')" href="#">Skills</a></li>
                     <li><a onClick="navSection('portfolio')" href="#">Portfolio</a></li>
                     <li><a onClick="navSection('blog')" href="#">Blog</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a onClick="displayFormContact('block')" href="#">Contacto</a></li>
                 </ul>
             </div>
         </nav>
@@ -70,6 +70,22 @@
         <section id="portfolio" class="slide" style="display: none;">Portfolio</section>
         <section id="blog" class="slide" style="display: none;">Blog</section>
     </div>
+
+    <div id="contact_form">
+        <form action="php/contact.php" id="form" name="form" method="POST">
+            <div id="close_form" onClick="displayFormContact('none')"></div>
+            <figure>
+                <img src="icons/envelope.png" alt="Contáctame">
+            </figure>
+            <p>Dí Hola</p>
+            <input type="text" name="name" id="name" placeholder="Tu nombre" onfocus="if(this.placeholder == '') this.placeholder = 'Tu nombre'">
+            <input type="email" name="email" id="email" placeholder="Tu email" onfocus="if(this.placeholder == '') this.placeholder = 'Tu email'">
+            <textarea name="message" id="message" placeholder="Mensaje" onfocus="if(this.placeholder == '') this.placeholder = 'Mensaje'"></textarea>
+            <input type="submit" name="submit" id="submitButton" value="ENVIAR" />
+        </form>
+    </div>
+
+    <div id="contact_button" onClick="displayFormContact('block')"></div>
 
     <script type="text/javascript" src="js/scripts.js"></script>
 </body>

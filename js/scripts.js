@@ -70,3 +70,8 @@ function setColors(position, search) {
     var menu = document.getElementsByTagName("header")[0];
     menu.style.background = backgroundMenu;
 }
+
+function displayFormContact(value) {
+    var contactForm = document.querySelector('#contact_form');
+    contactForm.style.display = value;
+}

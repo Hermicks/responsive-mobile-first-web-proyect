@@ -1,3 +1,5 @@
+/* Estilos generales de la web */
+
 body {
     font-size: 16px;
     font-family: 'aldo', sans-serif;
@@ -5,15 +7,19 @@ body {
     position: relative;
 }
 
+/* Estilos del header */
+
 header {
     background: #233D58;
-    height: 100px;
+    height: 40px;
     width: 100%;
 }
 
 header h1 {
     display: none;
 }
+
+/* Estilos de la barra de navegación */
 
 header nav .ioMenuMovil {
     cursor: pointer;
@@ -67,6 +73,8 @@ header nav #card_menu ul li a {
     text-decoration: none;
 }
 
+/* Estilos de los botones de secciones */
+
 header #prev_section,
 header #next_section {
     cursor: pointer;
@@ -95,6 +103,8 @@ header #next_section i {
     top: 2px;
 }
 
+/* Estilos del slider */
+
 #slider {
     height: 600px;
     position: relative;
@@ -108,14 +118,118 @@ header #next_section i {
     width: 100%;
 }
 
+/* Estilos del formulario de contacto */
+
+#contact_form {
+    background: white;
+    box-shadow: 0px 0px 3px #9f9e9e;
+    font-family: 'aller';
+    display: none;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+    right: 5px;
+    top: 40px;
+    width: 250px;
+    z-index: 999;
+}
+
+#contact_form #close_form {
+    height: 30px;
+    left: 85%;
+    position: absolute;
+    top: 195px;
+    width: 30px;
+}
+
+#contact_form #close_form:hover {
+    cursor: pointer;
+}
+
+#contact_form #close_form:before {
+    content: '\ea0f';
+    font-family: 'icomoon';
+    left: 7px;
+    position: relative;
+    top: 5px;
+}
+
+#contact_form figure {
+    background: #29abe2;
+    height: 180px;
+    margin: 0px;
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+#contact_form figure img {
+    margin-top: 10px;
+    margin-right: 10px;
+    height: 90%;
+    width: 90%;
+}
+
+#contact_form p {
+    margin: 20px;
+    margin-left: 5%;
+    width: 90%;
+}
+
+#contact_form input,
+#contact_form textarea {
+    border: none;
+    border-bottom: 2px solid gray;
+    display: block;
+    font-weight: bold;
+    margin: 20px;
+    margin-left: 5%;
+    margin-bottom: 50px;
+    padding-bottom: 5px;
+    width: 90%;
+}
+
+#contact_form #submitButton {
+    background: #F8931F;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 8px 0px;
+}
+
+/* Estilos del botón de contacto */
+
+#contact_button {
+    background: #F8931F;
+    border-radius: 50%;
+    color: white;
+    height: 60px;
+    position: fixed;
+    right: 15px;
+    top: 85vh;
+    width: 60px;
+    z-index: 80;
+}
+
+#contact_button:hover {
+    cursor: pointer;
+}
+
+#contact_button:before {
+    content: '\e9f9';
+    font-size: 2.8em;
+    font-family: 'icomoon';
+    left: 7.3px;
+    position: relative;
+    top: 4.5px;
+}
+
 /* Esqueleto Responsive Design */
+
+/* Móviles */
 @media screen and (min-width: 480px) {
     body {
         background: red;
-    }
-
-    header {
-        height: 40px;
     }
 }
 
@@ -124,6 +238,8 @@ header #next_section i {
         background: pink;
     }
 }
+
+/* Tablet */
 
 @media screen and (min-width: 767px) {
 
@@ -239,7 +355,24 @@ header #next_section i {
         left: 2px;
         top: 2px;
     }
+
+    #contact_form {
+        top: 50px;
+        width: 400px;
+    }
+
+    #contact_form figure img {
+        margin-top: 17px;
+        height: 80%;
+        width: 80%;
+    }
+
+    #contact_button {
+        right: 50px;
+    }
 }
+
+/* Ordenador */
 
 @media screen and (min-width: 950px) {
     body {
