@@ -95,6 +95,19 @@ header #next_section i {
     top: 2px;
 }
 
+#slider {
+    height: 600px;
+    position: relative;
+    width: 100%;
+}
+
+#slider section.slide {
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
 /* Esqueleto Responsive Design */
 @media screen and (min-width: 480px) {
     body {

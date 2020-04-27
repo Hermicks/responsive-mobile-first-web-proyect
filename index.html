@@ -4,10 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mi página personal!">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Pablo Hermida Triñanes">
     <title>Pablo Hermida</title>
     <!-- Modernizr JS -->
     <script src="js/modernizr-custom.js"></script>
-    <!-- Normlize CSS -->
+    <!-- Normalize CSS -->
     <link rel="stylesheet" href="css/normalize.css">
     <!-- Fonts -->
     <link rel="stylesheet" href="css/aldo.css">
@@ -42,37 +45,33 @@
                     <img src="icons/logo.png" alt="Logo de la web">
                 </figure>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Sobre mí</a></li>
-                    <li><a href="">Skills</a></li>
-                    <li><a href="">Portfolio</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Contacto</a></li>
+                    <li><a onClick="navSection('home')" href="#">Home</a></li>
+                    <li><a onClick="navSection('aboutMe')" href="#">Sobre mí</a></li>
+                    <li><a onClick="navSection('skills')" href="#">Skills</a></li>
+                    <li><a onClick="navSection('portfolio')" href="#">Portfolio</a></li>
+                    <li><a onClick="navSection('blog')" href="#">Blog</a></li>
+                    <li><a href="#">Contacto</a></li>
                 </ul>
             </div>
         </nav>
 
-        <div id="prev_section">
+        <div id="prev_section" onClick="displaySection('prev')">
             <i class="icon-previous"></i>
         </div>
-        <div id="next_section">
+        <div id="next_section" onClick="displaySection('next')">
             <i class="icon-next"></i>
         </div>
     </header>
 
-    <script>
-        function displayMenu() {
-            var display;
-            var card_menu = document.querySelector("#card_menu");
-            display = card_menu.style.display;
+    <div id="slider">
+        <section id="home" class="slide" style="display: block;">Home</section>
+        <section id="aboutMe" class="slide" style="display: none;">About Me</section>
+        <section id="skills" class="slide" style="display: none;">Skills</section>
+        <section id="portfolio" class="slide" style="display: none;">Portfolio</section>
+        <section id="blog" class="slide" style="display: none;">Blog</section>
+    </div>
 
-            if (!display || display === "none") {
-                card_menu.style.display = "block";
-            } else {
-                card_menu.style.display = "none";
-            }
-        }
-    </script>
+    <script type="text/javascript" src="js/scripts.js"></script>
 </body>
 
 </html>
